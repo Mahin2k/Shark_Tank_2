@@ -4,53 +4,183 @@
 <head>
   <meta charset="utf-8">
   <title>Tresway</title>
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,500,700" rel="stylesheet">
-  
+
   <style>
+  html, body, div, span, applet, object,
+ iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+ pre, a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, font, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var, b, u,
+ i, center, dl, dt, dd, ol, ul, li, fieldset,
+ form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+ }
+
   *{
     font-family: 'Roboto', sans-serif;;
   }
-  body{
-    background-color: #E4FFFC;
-    background-size: 400% 400%;
-    background-image: linear-gradient(to right, #88E7FF, #E4FFFC);
-    animation: gAnim 5s linear infinite;
-  }
-  @keyframes gAnim{
-   0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-  
+
+
+
   .cName{
     position:absolute;
-    color: #43464C;
     top: 35%;
-    left:40%;
+    left:38%;
     font-size: 100px;
-    font-weight: 300;
-    
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 20px;
+    mix-blend-mode: lighten;
   }
-  
-  
-    
+  #menu {
+  position: fixed;
+  z-index: 5;
+  height: 100%;
+  background-color: #E4FFFC;
+  display: block;
+  width: 250px;
+  left: -250px;
+  transition: left 0.5s linear;
+}
+
+#menu.visible {
+  left: 0px;
+  transition: left 0.5s linear;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 130%;
+}
+
+#menu ul li {
+  list-style: none;
+}
+
+#menu ul li a {
+  vertical-align: middle;
+  color: white;
+  text-align: center;
+  display: block;
+  width: 230px;
+  padding: 10px;
+  text-decoration: none;
+  color: #3D4252;
+  font-size: 30px;
+  top: 10px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#menu ul li a:hover {
+  color:  #6AC8FF;
+  cursor: pointer;
+}
+
+.container {
+  position: fixed;
+  left: 2%;
+  top: 2%;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+body{
+  background-size: cover;
+}
+#bgvid{
+  position: absolute;
+  left: 0%;
+  top: 0%:
+  width: 100vw;
+}
+body{
+  overflow-y: hidden;
+}
+
   </style>
 </head>
 
 <body>
-  
-  
 
+    <div id="firstpage">
 
+      <div id="menu">
 
-  <div id="firstpage">
-    <h1 class="cName">Tresway</h1>
+      <ul>
+        <li><a href="#" id="Homelink">Home</a></li><br><br>
+        <li><a href="#" id="Productlink">Product</a></li><br><br>
+        <li><a href="#" id="AboutUslink">About Us</a></li><br><br>
+        <li><a href="#" id="Buylink">Buy Now</a></li><br><br>
+      </ul>
+
+      <div class="container toggle-btn" onclick="changeMenuBar(this);">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+
+    <video id="bgvid" autoplay loop src="http://techteach.us/Web2019/Mislam/WCP/Videos/Dark%20-%2018392.mp4" ></video>
+        <h1 class="cName">Tresway</h1>
+
   </div>
+
+
+
+
+
+
   <div id="secondpage">
-    
+
   </div>
-  
-  <script></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+  $('.toggle-btn').click(function() {
+    $('#menu').toggleClass('visible');
+  })
+});
+
+function changeMenuBar(x) {
+    x.classList.toggle("change");
+  }
+
+
+  </script>
 </body>
 </html>
