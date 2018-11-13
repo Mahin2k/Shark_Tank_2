@@ -5,28 +5,52 @@
   <meta charset="utf-8">
   <title>Canvas Page</title>
 
+
 <style>
 #canvaspage{
-  
-}</style>
+  width: 80%;
+  height: 100%;
+
+}
+#painter{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border: 1px solid black;
+}
+#painter a {
+  position: absolute;
+  font-size: 25px;
+  color: black;
+}
+</style>
 
 
 </head>
 
 <body>
-
+  <a href="#" onclick="$('#painter').jqScribble.clear()" >clear</a>
+  <a href="#" onclick=""  id="save">save</a>
   <div id="canvaspage">
+    <canvas id="painter" >
+    </canvas>
   </div>
 
 
-
-
-
-
-
-
-
-<script src="jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jqScribble\jquery.jqscribble.js"></script>
+<script>
+
+$('#painter').jqScribble({
+  height:700,
+  width:200
+});
+$('#save').click(function(){
+  $('#painter').data('jqScribble').save()
+})
+
+
+
+</script>
 </body>
 </html>
