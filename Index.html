@@ -3,64 +3,76 @@
 <head>
 <meta charset="utf-8">
 <title>BUY NOW</title>
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width,initial-scale=0.8">
-<!-- Chrome, Firefox OS and Opera -->
-<meta name="theme-color" content="#707070">
-<!-- Windows Phone -->
-<meta name="msapplication-navbutton-color" content="#707070">
-<!-- iOS Safari -->
-<meta name="apple-mobile-web-app-status-bar-style" content="#707070">
-<!-- Mobile Capable -->
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" href="Lab_7/img/favicon.png" type="image/png">
+
+<style>
+table{
+  background-color:
+  #E4FFFC
+  ;
+}
+  td{color:#FF9A93;
+    
+  }
+  body{
+    background-color:#43464C;
+  }
+  #Buytext{
+    color:#FF9A93;
+  }
+  #typeinfo{
+    color:#FF9A93;
+  }
+
+  
+  
+</style>
 </head>
 
 <body>
 <center>
-  <div id="banner">
-    <h1 id="lab">BUY NOW</h1>
+  <div id="Buybanner">
+    <h1 id="Buytext">BUY NOW</h1>
   </div>
-  <div id="bannerName">
+ <div id="bannerName">
     <h4 id="name"></h4>
     <h5 class="data"></h5>
     <h5 class="data" id="dataBtm"></h5>
   </div>
-  <div class="paragraph"> <span>Type your information in the form below:</span> </div>
+  <div class="paragraph"> <span id="typeinfo">Type your information in the form below:</span> </div>
 	<div class="container">
     <form name="addressForm">
   <table>
     <tr>
       <td><span>First Name* :</span></td>
-      <td><input class="inputForm" type="text" name="inputFName" placeholder="Enter First Name"></td>
+      <td><input id="name" class="inputForm" type="text" name="inputFName" placeholder="Enter First Name"></td>
       <td><span class="restriction" id="firstName"></span></td>
     </tr>
-    <tr>
+    <tr id="name2">
       <td><span>Last Name* : </span></td>
       <td><input class="inputForm" type="text" name="inputLName" placeholder="Enter Last Name"></td>
       <td><span class="restriction" id="lastName"></span></td>
     </tr>
-    <tr>
+    <tr id="Email">
       <td><span>Email* :</span></td>
       <td><input class="inputForm" type="text" name="inputEmail" placeholder="Enter Email Address"></td>
       <td> <span class="restriction" id="email"></span></td>
     </tr>
-    <tr>
+    <tr id="phone">
       <td><span>Phone* :</span></td>
       <td><input class="inputForm" type="tel" name="inputPhone" placeholder="Enter Phone Number"></td>
       <td><span class="restriction" id="phoneNum"></span></td>
     </tr>
-    <tr>
+    <tr id="Address">
       <td><span>Address :</span></td>
       <td><input class="inputForm" type="text" id="inputAddress" name="inputLocation" placeholder="Enter Address"></td>
       <td> <span class="restriction" id="locale"></span></td>
     </tr>
-    <tr>
+    <tr id="Zip">
       <td><span>Zip* :</span></td>
       <td><input class="inputForm" type="number" id="inputZip" name="inputLocale" placeholder="Enter Zip Code"></td>
       <td><span class="restriction" id="zip"></span></td>
     </tr>
-    <tr>
+    <tr id="CCC">
       <td><span>Credit Card Number* :</span></td>
       <td><input class="inputForm" type="number" id="ccn" name="inputStealMoney" placeholder="Enter Credit Card Number"></td>
       <td><span class="restriction" id="CCNSpan"></span></td>
