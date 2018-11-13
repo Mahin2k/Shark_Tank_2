@@ -29,8 +29,8 @@
 </head>
 
 <body>
-  <a href="#" onclick="$('#painter').jqScribble.clear()" >clear</a>
-  <a href="#" onclick=""  id="save">save</a>
+  <a href="#"  id="clear">clear</a>
+  <a href="#"   id="canvasImg">save</a>
   <div id="canvaspage">
     <canvas id="painter" >
     </canvas>
@@ -45,8 +45,13 @@ $('#painter').jqScribble({
   height:700,
   width:200
 });
-$('#save').click(function(){
-  $('#painter').data('jqScribble').save()
+$('#canvasImg').click(function(){
+  canvas = $('#painter');
+  canvas.data('jqScribble').save()
+
+})
+$('#clear').click(function(){
+  $('#painter').data('jqScribble').clear()
 })
 
 
