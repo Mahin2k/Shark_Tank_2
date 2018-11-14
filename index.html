@@ -8,20 +8,36 @@
 
 <style>
 #canvaspage{
-  width: 80%;
+  width: 48%;
   height: 100%;
-
 }
 #painter{
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 24%;
   border: 1px solid black;
 }
-#painter a {
+#clear {
   position: absolute;
+  top: 75%;
+  left: 60%;
   font-size: 25px;
   color: black;
+  z-index: 5;
+}
+#canvasImg{
+  position: absolute;
+  top: 75%;
+  left: 65%;
+  font-size: 25px;
+  color: black;
+  z-index: 5;
+}
+#bgimg{
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  transform: scale(2.2);
 }
 </style>
 
@@ -31,10 +47,13 @@
 <body>
   <a href="#"  id="clear">clear</a>
   <a href="#"   id="canvasImg">save</a>
+  <div id="outer-wrapper">
+    <img id="bgimg" src="https://i.imgur.com/TUC4d9P.jpg"  />
   <div id="canvaspage">
     <canvas id="painter" >
     </canvas>
   </div>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -42,16 +61,17 @@
 <script>
 
 $('#painter').jqScribble({
-  height:700,
-  width:200
+  height:680
 });
+
 $('#canvasImg').click(function(){
   canvas = $('#painter');
-  canvas.data('jqScribble').save()
+  canvas.data('jqScribble').save();
 
 })
+
 $('#clear').click(function(){
-  $('#painter').data('jqScribble').clear()
+  $('#painter').data('jqScribble').clear();
 })
 
 
