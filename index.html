@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -38,6 +39,38 @@
     padding: 20px;
     mix-blend-mode: lighten;
   }
+    #canvaspage{
+  width: 48%;
+  height: 100%;
+}
+#painter{
+  position: absolute;
+  top: 10%;
+  left: 24%;
+  border: 1px solid black;
+}
+#clear {
+  position: absolute;
+  top: 75%;
+  left: 60%;
+  font-size: 25px;
+  color: black;
+  z-index: 5;
+}
+#canvasImg{
+  position: absolute;
+  top: 75%;
+  left: 65%;
+  font-size: 25px;
+  color: black;
+  z-index: 5;
+}
+#bgimg{
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  transform: scale(2.2);
+}
   #menu {
   position: fixed;
   z-index: 5;
@@ -185,11 +218,39 @@ body{
 	</div>
 
    </div>
- <div id="secondpage" style="">
 
+  
+    <div id="secondpage">
+      <a href="#"  id="clear">clear</a>
+      <a href="#"   id="canvasImg">save</a>
+  <div id="outer-wrapper">
+    <img id="bgimg" src="https://i.imgur.com/TUC4d9P.jpg"  />
+  <div id="canvaspage">
+    <canvas id="painter" >
+    </canvas>
   </div>
+</div>
+</div>
+  
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="jqScribble\jquery.jqscribble.js"></script>
   <script>
+    
+$('#painter').jqScribble({
+  height:680
+});
+
+$('#canvasImg').click(function(){
+  canvas = $('#painter');
+  canvas.data('jqScribble').save();
+
+})
+
+$('#clear').click(function(){
+  $('#painter').data('jqScribble').clear();
+})
+    
   $(document).ready(function() {
   $('.toggle-btn').click(function() {
     $('#menu').toggleClass('visible');
@@ -377,3 +438,4 @@ $(document).ready(function() {
   </script>
 </body>
 </html>
+
