@@ -1,88 +1,285 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>BUY NOW</title>
+  <style>
 
-<style>
-table{
-  background-color:
-  #E4FFFC
-  ;
+body {
+  font-family: 'Roboto', sans-serif;
 }
-  td{color:#FF9A93;
-    
+
+.container {
+  width: 2000px;
+	margin:-top: 0;
+	padding-top: 0;
+	height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  width: 900px;
+  height: 600px;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  background: #729272;
+  
+  box-shadow: 0px 5px 12px 2px rgba(0,0,0,0.1);
+}
+
+.breadcrumb {
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  
+  
+  color: #B0636D;
+  
+  font-size: 1.1rem;
+  font-weight: 200;
+  
+  padding: 2rem;
+}
+
+
+
+.active {
+  font-weight: 200;
+	font-size: 60px;
+  border-bottom: 3px solid #49425a;
+  color: #49425a;
+}
+
+.next {
+  color: #49425A;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.payment {
+  height: 100%;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.creditcard {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thecard {
+  width: 365px;
+  height: 225px;
+  
+  display: flex;
+  flex-direction: column;
+  
+  background: #49425A;
+  
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.3);
+  
+  text-shadow: 0 1px 0 rgba(0,0,0,1);
+}
+
+.top-card {
+  display: flex;
+}
+
+.card-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3rem;
+  color: #EBF1EB;
+  div {
+    margin: 0.3rem 0;
   }
-  body{
-    background-color:#43464C;
+ 
+}
+
+
+
+.card-title {
+  margin: 20px;
+  margin-left: -40px;
+  
+  z-index: 1;
+  
+  color: #EBF1EB;
+  
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.form {
+  width: 50%;
+  height: 100%;
+  margin: 0 350px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  font-family: 'Roboto', sans-serif;
+  
+  color: #49425a;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+label {
+  margin-bottom: 0.3rem;
+}
+
+input, select {
+  margin-bottom: 1.3rem;
+  padding: 1rem;
+  
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0);
+  
+  outline: none;
+  
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  
+  background: #FFF;
+  color: #49425a;
+  
+  transition: all 300ms ease;
+ 
+}
+
+.small {
+  width: 100%;
+  display: flex;
+  
+  label {
+  display: block;
   }
-  #Buytext{
-    color:#FF9A93;
+  
+  p {
+  width: 200px;
+  margin-left: 1rem;
+  align-self: center;
   }
-  #typeinfo{
-    color:#FF9A93;
+}
+
+select {
+  width: 45%;
+  height: 3.3rem;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+  label {
+  display: block;
   }
+}
+
+button {
+ 
+  font-weight: 300;
+ font-size: 40px;
+  font-family: 'Muli', sans-serif;
+
+
+  padding: 1rem; 
+
+  border: none;
+  outline: none; 
+  cursor: pointer;
 
   
-  
-</style>
+
+}
+
+  </style>
 </head>
-
 <body>
-<center>
-  <div id="Buybanner">
-    <h1 id="Buytext">BUY NOW</h1>
+
+<div class="container">
+  
+  <div class="card-body">
+    
+    <div class="breadcrumb">
+      <div class="active">Check Out</div>
+    </div>
+    
+    <div class="payment">
+      
+    
+      <div class="form">
+
+        <form action="" method="get">
+          <label for="Name"> Full Name  </label>
+          <input type="text" id="Fullname" placeholder="Full name">
+          <label for="Address"> Address  </label>
+			<input type="text" id="Address" placeholder="Address">
+			<label for="Phone#">Phone Number </label>
+          <input type="text" id="Phone_number" placeholder="Phone Number">
+          <label for="cardnumber">Card Number</label>
+          <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456">
+          <label for="exp">Expiration Date</label>
+          <div class="date">
+              <select name="month" id="month">
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+              <select name="Year">
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+              </select>
+            </div>
+        
+          <button>Proceed</button>
+        </form>
+      </div>
+      
+    </div>
+    
   </div>
- <div id="bannerName">
-    <h4 id="name"></h4>
-    <h5 class="data"></h5>
-    <h5 class="data" id="dataBtm"></h5>
-  </div>
-  <div class="paragraph"> <span id="typeinfo">Type your information in the form below:</span> </div>
-	<div class="container">
-    <form name="addressForm">
-  <table>
-    <tr>
-      <td><span>First Name* :</span></td>
-      <td><input id="name" class="inputForm" type="text" name="inputFName" placeholder="Enter First Name"></td>
-      <td><span class="restriction" id="firstName"></span></td>
-    </tr>
-    <tr id="name2">
-      <td><span>Last Name* : </span></td>
-      <td><input class="inputForm" type="text" name="inputLName" placeholder="Enter Last Name"></td>
-      <td><span class="restriction" id="lastName"></span></td>
-    </tr>
-    <tr id="Email">
-      <td><span>Email* :</span></td>
-      <td><input class="inputForm" type="text" name="inputEmail" placeholder="Enter Email Address"></td>
-      <td> <span class="restriction" id="email"></span></td>
-    </tr>
-    <tr id="phone">
-      <td><span>Phone* :</span></td>
-      <td><input class="inputForm" type="tel" name="inputPhone" placeholder="Enter Phone Number"></td>
-      <td><span class="restriction" id="phoneNum"></span></td>
-    </tr>
-    <tr id="Address">
-      <td><span>Address :</span></td>
-      <td><input class="inputForm" type="text" id="inputAddress" name="inputLocation" placeholder="Enter Address"></td>
-      <td> <span class="restriction" id="locale"></span></td>
-    </tr>
-    <tr id="Zip">
-      <td><span>Zip* :</span></td>
-      <td><input class="inputForm" type="number" id="inputZip" name="inputLocale" placeholder="Enter Zip Code"></td>
-      <td><span class="restriction" id="zip"></span></td>
-    </tr>
-    <tr id="CCC">
-      <td><span>Credit Card Number* :</span></td>
-      <td><input class="inputForm" type="number" id="ccn" name="inputStealMoney" placeholder="Enter Credit Card Number"></td>
-      <td><span class="restriction" id="CCNSpan"></span></td>
-    </tr>
-  </table>
-    <input type="button" value="Submit" onClick="return funcCall()" id="button"/>
-		<span id="output"></span>
-  </form></div>
-	<p class="paragraph"></p>
-<script src="Info.js"></script>
-</center>
+  
+</div>
 </body>
 </html>
