@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 #menu ul li a:hover {
-  color:  #6AC8FF;
+  color:  #43464C;
   cursor: pointer;
 }
 .container {
@@ -187,18 +187,19 @@ button{
   font-weight: 200;
   border:1px solid black;
   background: none;
-  color: lightblue;
   cursor: pointer;
-  color: #6AC8FF;
+  color: #0082C8;
 }
 #buy-now{
   font-size: 30px;
   font-weight: 300;
   background: none;
-  color: lightblue;
+  color: #43464C;
   border: none;
   cursor: pointer;
-  color: #6AC8FF;
+}
+#buy-now:hover{
+  text-decoration: underline;
 }
   </style>
 </head>
@@ -209,6 +210,7 @@ button{
       <ul>
         <li><a href="#" id="Homelink">Home</a></li><br><br>
         <li><a href="#" id="Productlink">Product</a></li><br><br>
+        <li><a href="#" id="Demolink">Demo</a></li><br><br>
         <li><a href="#" id="AboutUslink">About Us</a></li><br><br>
         <li><a href="#" id="Buylink">Buy Now</a></li><br><br>
       </ul>
@@ -230,7 +232,7 @@ button{
               <th width="50%">
                 <h1 id="product-title">The Infinity Book</h1><br><br>
                 <h2 id="product-text">Explore and work on a clear and stunningly brilliant screen. <br>Transform your Infinity Book into a PC experience. Create a <br>PowerPoint presentation and revise budgets in Excel at your<br> favorite café. Then edit, sketch and capture inspiration with the<br> included pen. And using farfield mics, you can even control your <br>Infinity Book from a distance with Google Assistant.</h2><br><br><br><br><br><br><br><br>
-                <button id="buy-now">Buy Now ></button>
+                <button id="buy-now">Buy Now</button>
                 </th>
           </tr>
       </table>
@@ -238,7 +240,7 @@ button{
 
    </div>
 
-  
+
     <div id="secondpage">
       <button id="clear">clear</button>
       <button id="canvasImg">save</button>
@@ -250,12 +252,12 @@ button{
   </div>
 </div>
 </div>
-  
-  
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="jqScribble\jquery.jqscribble.js"></script>
   <script>
-    
+
 $('#painter').jqScribble({
   height:680
 });
@@ -269,7 +271,7 @@ $('#canvasImg').click(function(){
 $('#clear').click(function(){
   $('#painter').data('jqScribble').clear();
 })
-    
+
   $(document).ready(function() {
   $('.toggle-btn').click(function() {
     $('#menu').toggleClass('visible');
@@ -457,4 +459,3 @@ $(document).ready(function() {
   </script>
 </body>
 </html>
-
