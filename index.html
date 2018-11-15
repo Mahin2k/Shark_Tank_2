@@ -57,6 +57,43 @@
   color: black;
   z-index: 5;
 }
+#red-pen{
+  position: absolute;
+  top: 75%;
+  left: 25%;
+  font-size: 25px;
+  color: red;
+  z-index: 5;
+  background-color:red;
+} 
+#blue-pen{
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  font-size: 25px;
+  color: blue;
+  z-index: 5;
+  background-color:blue;
+}
+#green-pen{
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  font-size: 25px;
+  color: green;
+  z-index: 5;
+  background-color:green;
+} 
+#black-pen{
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  font-size: 25px;
+  color: black;
+  z-index: 5;
+  background-color:black;
+} 
+
 #canvasImg{
   position: absolute;
   top: 75%;
@@ -240,13 +277,21 @@ button{
 
   
     <div id="secondpage">
+      
+      <button id="red-pen">RED</button>
+      <button id="blue-pen">Blue</button>
+      <button id="green-pen">GRE</button>
+      <button id="black-pen">BLA</button>
       <button id="clear">clear</button>
       <button id="canvasImg">save</button>
+      
   <div id="outer-wrapper">
+    
     <img id="bgimg" src="https://i.imgur.com/TUC4d9P.jpg"  />
   <div id="canvaspage">
     <canvas id="painter" >
     </canvas>
+    
   </div>
 </div>
 </div>
