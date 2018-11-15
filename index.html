@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -150,6 +151,69 @@ body{
   left: 100%;
 }
 
+#product-title{
+	 font-size:70px;
+	font-weight: 400;
+	 align-items:"left";
+	  }
+#product-desc{
+		align-content:"center";
+		width: 100%;
+	  }
+	  #product-text{
+		  font-weight: 200;
+		  align-content: "center";
+	  }
+
+	  #h1{
+
+	   position: absolute;
+	   top: 23%;
+	   left:65%;
+	   color:black;
+	  font-size:70px;
+	  font-weight: 400;
+	  margin-top:30px;
+	  width:25%;
+  font-family:'Roboto', sans-serif ;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 3px;
+
+}
+
+
+
+
+
+	  #img{
+	position: absolute;
+  top:20%;
+  left: 10%;
+  width: 40%;
+  border: 1px solid black;
+
+	  }
+	   #Rside{
+	font-family: 'Roboto', sans-serif;
+	font-size:35px;
+	font-weight: 300;
+  width:40%;
+  height:70%;
+  position: absolute;
+  top: 37%;
+  left: 55%;
+}
+
+
+	  #h1{color:#ff9a93;
+	  font-size:40px;
+	  margin-top:30px;}
+	  img{
+	   border-radius:50%;
+
+
   </style>
 </head>
 
@@ -174,12 +238,49 @@ body{
     <video id="bgvid" src="http://techteach.us/Web2019/Mislam/WCP/Videos/Dark%20-%2018392.mp4" autoplay loop muted></video>
     <h1 class="cName">Tresway</h1>
    </div>
-
  <div id="secondpage">
 
 
-  </div>
 
+   <h1 id="h1" class="color">Our Team</h1>
+   <img src="http://techteach.us/Web2019/Asaleh/WCP/photos/team.jpeg"  id="img">
+    <fieldset id="Rside" class="text">
+     <p> We, the TresWays, are a group of teenagers that are working on
+     a project called the infinity book to make everyones lives easier.
+     Infinity book is a tab that contains a pen that can
+     be used to write easily. Infinity book can be used by
+     anyone from a student to an artist and it is easy to carry around.
+     Our goal is to continue working on products that can make everyones lives easier.
+
+
+     </p>
+     <br>
+     <br>
+   </fieldset>
+
+
+   <center>
+   <h1 id="h1">Our Team</h1>
+   <img src="https://via.placeholder.com/300">
+   <img src="https://via.placeholder.com/300">
+   <img src="https://via.placeholder.com/300">
+   <img src="https://via.placeholder.com/300">
+   </center>
+
+   </div>
+    <div id="product-page">
+      <table id="product-desc">
+          <tr>
+              <th width="50%"><img src="ch-fr-galaxy-tab-s3-9-7-t820-sm-t820nzsaaut-rperspectivesilver-61499676.jpeg" width="120%"></th>
+              <th width="50%">
+                <h1 id="product-title">The Infinity Book</h1><br>
+                <h2 id="product-text">Explore and work on a clear and stunningly brilliant screen. Transform your Infinity Book into a PC experience. Create a PowerPoint presentation and revise budgets in Excel at your favorite café. Then edit, sketch and capture inspiration with the included pen. And using farfield mics, you can even control your Infiinity Book from a distance with Google Assistant.</h2></th>
+          </tr>
+      </table>
+
+	</div>
+
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
   $(document).ready(function() {
@@ -402,6 +503,7 @@ $(document).ready(function() {
            // Turn this off by setting $.event.special.mousewheel.settings.adjustOldDeltas to false.
            return special.settings.adjustOldDeltas && orgEvent.type === 'mousewheel' && absDelta % 120 === 0;
        }
+
 
    }));
   </script>
