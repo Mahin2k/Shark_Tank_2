@@ -238,6 +238,12 @@ button{
 #buy-now:hover{
   text-decoration: underline;
 }
+#bgimg{
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  transform: scale(2.2);
+}
   </style>
 </head>
 
@@ -280,12 +286,11 @@ button{
 
     <div id="secondpage">
 
-      <button id="red-pen">RED</button>
-      <button id="blue-pen">Blue</button>
-      <button id="green-pen">GRE</button>
-      <button id="black-pen">BLA</button>
-      <button id="clear">clear</button>
-      <button id="canvasImg">save</button>
+
+
+
+      <button id="clear" >clear</button>
+      <button id="canvasImg" >save</button>
 
   <div id="outer-wrapper">
 
@@ -302,6 +307,8 @@ button{
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="jqScribble\jquery.jqscribble.js"></script>
   <script>
+
+
 
 $('#Demolink').on('click', function(){
   $('HTML, body').animate({scrollLeft: 2000}, 1000)
@@ -332,6 +339,7 @@ $('#clear').click(function(){
 function changeMenuBar(x) {
     x.classList.toggle("change");
   }
+
 $(document).ready(function() {
    $('HTML, body').mousewheel(function(e, delta) {
    		this.scrollLeft -= (delta * 40);
