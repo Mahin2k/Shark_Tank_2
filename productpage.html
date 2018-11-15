@@ -65,7 +65,7 @@
   color: red;
   z-index: 5;
   background-color:red;
-} 
+}
 #blue-pen{
   position: absolute;
   top: 75%;
@@ -83,7 +83,7 @@
   color: green;
   z-index: 5;
   background-color:green;
-} 
+}
 #black-pen{
   position: absolute;
   top: 75%;
@@ -92,7 +92,7 @@
   color: black;
   z-index: 5;
   background-color:black;
-} 
+}
 
 #canvasImg{
   position: absolute;
@@ -245,11 +245,11 @@ button{
 	<div id="menu">
 
       <ul>
-        <li><a href="#" id="Homelink">Home</a></li><br><br>
+        <li><a href="index.html" id="Homelink">Home</a></li><br><br>
         <li><a href="#" id="Productlink">Product</a></li><br><br>
         <li><a href="#" id="Demolink">Demo</a></li><br><br>
-        <li><a href="#" id="AboutUslink">About Us</a></li><br><br>
-        <li><a href="#" id="Buylink">Buy Now</a></li><br><br>
+        <li><a href="index.html#secondpage" id="AboutUslink">About Us</a></li><br><br>
+        <li><a href="Buypage.html" id="Buylink">Buy Now</a></li><br><br>
       </ul>
 
       <div class="container toggle-btn" onclick="changeMenuBar(this);">
@@ -279,21 +279,21 @@ button{
 
 
     <div id="secondpage">
-      
+
       <button id="red-pen">RED</button>
       <button id="blue-pen">Blue</button>
       <button id="green-pen">GRE</button>
       <button id="black-pen">BLA</button>
       <button id="clear">clear</button>
       <button id="canvasImg">save</button>
-      
+
   <div id="outer-wrapper">
-    
+
     <img id="bgimg" src="https://i.imgur.com/TUC4d9P.jpg"  />
   <div id="canvaspage">
     <canvas id="painter" >
     </canvas>
-    
+
   </div>
 </div>
 </div>
@@ -302,6 +302,13 @@ button{
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="jqScribble\jquery.jqscribble.js"></script>
   <script>
+
+$('#Demolink').on('click', function(){
+  $('HTML, body').animate({scrollLeft: 2000}, 1000)
+})
+$('#Productlink').on('click', function(){
+  $('HTML, body').animate({scrollLeft: 0}, 1000)
+})
 
 $('#painter').jqScribble({
   height:680

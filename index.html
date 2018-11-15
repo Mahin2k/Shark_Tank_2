@@ -73,7 +73,6 @@
   cursor: pointer;
 }
 #menu ul li a:hover {
-  color:  #6AC8FF;
   cursor: pointer;
 }
 .container {
@@ -183,6 +182,7 @@ body{
 	  margin-top:30px;}
 	  img{
 	   border-radius:50%;
+   }
   </style>
 </head>
 <body>
@@ -190,9 +190,9 @@ body{
       <div id="menu">
       <ul>
         <li><a href="#" id="Homelink">Home</a></li><br><br>
-        <li><a href="#" id="Productlink">Product</a></li><br><br>
-        <li><a href="#" id="AboutUslink">About Us</a></li><br><br>
-        <li><a href="#" id="Buylink">Buy Now</a></li><br><br>
+        <li><a href="productpage.html" id="Productlink">Product</a></li><br><br>
+        <li><a href="#secondpage" id="AboutUslink">About Us</a></li><br><br>
+        <li><a href="Buypage.html" id="Buylink">Buy Now</a></li><br><br>
       </ul>
       <div class="container toggle-btn" onclick="changeMenuBar(this);">
         <div class="bar1"></div>
@@ -243,6 +243,14 @@ body{
     $('#menu').toggleClass('visible');
   })
 });
+
+$('#AboutUslink').on('click', function(){
+  $('HTML, body').animate({scrollLeft:2200}, 1000)
+})
+
+$('#Homelink').on('click', function(){
+  $('HTML, body').animate({scrollLeft:0}, 1000)
+})
 function changeMenuBar(x) {
     x.classList.toggle("change");
   }
