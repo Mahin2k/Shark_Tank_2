@@ -17,45 +17,24 @@ body {
 }
 
 .card-body {
+	margin-left: 500px;
+	margin-top: 170px;
   width: 900px;
   height: 600px;
-  
   display: flex;
-  align-items: center;
-
   background: #6AC8FF;
  
 }
 
-.breadcrumb {
-  display: flex;
-  color: #CCCCCC;
-  padding: 2%;
-}
-
-
 
 .active {
-  font-weight: 200;
 	font-size: 60px;
   color: #49425a;
+	margin-top: -30px;
+	margin-left: 100px
 }
 
-.next {
-  color: #49425A;
-  font-weight: 400;
-  font-style: italic;
-  opacity: 0.6;
-}
 
-.payment {
-  height: 100%;
-  width: 100%;
-  
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
 
 .creditcard {
   width: 50%;
@@ -207,16 +186,15 @@ button {
   </style>
 </head>
 <body>
-
-<div class="container">
   
-  <div class="card-body">
+<div class="card-body">
     
-    <div class="breadcrumb">
-      <div class="active">Check Out</div>
-    </div>
+
+      <div class="active">
+        <p> Check &nbsp; Out</p>
+      </div>
     
-    <div class="payment">
+    
       
     
       <div class="form">
@@ -255,16 +233,14 @@ button {
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
               </select>
-            </div>
+          </div>
         
           <button>Proceed</button>
         </form>
-      </div>
-      
-    </div>
-    
   </div>
-  
+      
 </div>
+    
+  
 </body>
 </html>
