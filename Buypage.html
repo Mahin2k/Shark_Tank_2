@@ -15,28 +15,28 @@ body {
 }
 
 .card-body {
-	margin-left: 500px;
+	margin-left: 400px;
 	margin-top: 170px;
-  width: 900px;
+  width: 1200px;
   height: 600px;
-  display: flex;
-  background: #6AC8FF;
- 
+  background: #49425a;
+ display:flex;
+
 }
 
 
 .active {
-	font-size: 60px;
-  color: #49425a;
-	margin-top: -30px;
-	margin-left: 100px
+	font-size: 50px;
+  color: #fff;
+	padding:30px;
+  width:100%;
 }
 
 .form {
   width: 50%;
   height: 100%;
   margin: 0 350px;
-  display: flex;
+  
   justify-content: center;
 }
 
@@ -45,10 +45,9 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
   font-family: 'Roboto', sans-serif;
-  
-  color: #49425a;
+  padding:30px;
+  color: #fff;
   font-size: 0.9rem;
   font-weight: 400;
 }
@@ -112,6 +111,9 @@ button {
   border:thick;
   outline:hidden;
   cursor: pointer;
+  font-weight:200;
+  color:white;
+  background-color:#11AC33;
 }
 
   </style>
@@ -122,14 +124,13 @@ button {
     
 
       <div class="active">
-        <p> Check out</p>
+       <h2>Checkout</h2>
+        
       </div>
-    
-    
       
     
       <div class="form">
-
+<div>
         <form action="" method="get">
           <label for="Name"> Full Name  </label>
           <input type="text" id="Fullname" placeholder="Full name">
@@ -164,9 +165,9 @@ button {
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
               </select>
-          </div>
-        
-          <button>Proceed</button>
+          </div><button>Proceed</button>
+        </div>
+          
         </form>
   </div>
       
